@@ -1,0 +1,138 @@
+Windows PowerShell
+(C) Корпорация Майкрософт (Microsoft Corporation). Все права защищены.
+
+Установите последнюю версию PowerShell для новых функций и улучшения! https://aka.ms/PSWindows
+
+PS C:\Users\kotik\OneDrive\Рабочий стол\WebStorme> git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   .idea/.gitignore
+        new file:   .idea/vcs.xml
+        new file:   index.js
+        new file:   package.json
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   .idea/vcs.xml
+        deleted:    index.js
+        deleted:    package.json
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .idea/WebStorme.iml
+        .idea/modules.xml
+        content/
+        index.html
+        pilt/
+        style/
+        ylesanne/
+
+PS C:\Users\kotik\OneDrive\Рабочий стол\WebStorme> git add .
+warning: in the working copy of '.idea/vcs.xml', LF will be replaced by CRLF the next time Git touches it
+PS C:\Users\kotik\OneDrive\Рабочий стол\WebStorme> git commit -m -a "Project"    
+error: pathspec 'Project' did not match any file(s) known to git
+PS C:\Users\kotik\OneDrive\Рабочий стол\WebStorme> git commit -a -m "Project"
+[master (root-commit) e35fae3] Project
+ 16 files changed, 517 insertions(+)
+ create mode 100644 .idea/.gitignore
+ create mode 100644 .idea/WebStorme.iml
+ create mode 100644 .idea/modules.xml
+ create mode 100644 .idea/vcs.xml
+ create mode 100644 content/1.jpg
+ create mode 100644 content/1.png
+ create mode 100644 content/lingid.html
+ create mode 100644 content/tood.html
+ create mode 100644 index.html
+ create mode 100644 pilt/1m.jpg
+ create mode 100644 pilt/2m.jpg
+ create mode 100644 pilt/3m.jpg
+ create mode 100644 pilt/4m.jpg
+ create mode 100644 style/index_style.css
+ create mode 100644 ylesanne/index.html
+ create mode 100644 ylesanne/index2_style.css
+PS C:\Users\kotik\OneDrive\Рабочий стол\WebStorme> git push
+fatal: No configured push destination.
+Either specify the URL from the command-line or configure a remote repository using
+
+    git remote add <name> <url>
+
+and then push using the remote name
+
+    git push <name>
+
+PS C:\Users\kotik\OneDrive\Рабочий стол\WebStorme> git config —global user.name «JekGuz»
+error: key does not contain a section: —global
+PS C:\Users\kotik\OneDrive\Рабочий стол\WebStorme> git config -global user.name «JekGuz»
+error: did you mean `--global` (with two dashes)?
+PS C:\Users\kotik\OneDrive\Рабочий стол\WebStorme> git config --global user.name «JekGuz»
+PS C:\Users\kotik\OneDrive\Рабочий стол\WebStorme> git config --global user.email «jekaterina.guzek@gmail.com»
+PS C:\Users\kotik\OneDrive\Рабочий стол\WebStorme> git push                                                   
+fatal: No configured push destination.
+Either specify the URL from the command-line or configure a remote repository using
+
+    git remote add <name> <url>
+
+and then push using the remote name
+
+    git push <name>
+
+PS C:\Users\kotik\OneDrive\Рабочий стол\WebStorme> git status
+On branch master
+nothing to commit, working tree clean
+PS C:\Users\kotik\OneDrive\Рабочий стол\WebStorme> git push JekGuz                                            
+fatal: The current branch master has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream JekGuz master
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+PS C:\Users\kotik\OneDrive\Рабочий стол\WebStorme> git push --set-upstream JekGuz master
+fatal: 'JekGuz' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+PS C:\Users\kotik\OneDrive\Рабочий стол\WebStorme> git remote -v
+PS C:\Users\kotik\OneDrive\Рабочий стол\WebStorme> git push --set-upstream WebStorm_1 master
+fatal: 'WebStorm_1' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+PS C:\Users\kotik\OneDrive\Рабочий стол\WebStorme> git remote add origin <https://github.com/JekGuz/WebStorm_1.git>
+строка:1 знак:23
++ git remote add origin <https://github.com/JekGuz/WebStorm_1.git>
++                       ~
+Оператор "<" зарезервирован для использования в будущем.
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : RedirectionNotSupported
+
+PS C:\Users\kotik\OneDrive\Рабочий стол\WebStorme> git remote add origin https://github.com/JekGuz/WebStorm_1.git  
+PS C:\Users\kotik\OneDrive\Рабочий стол\WebStorme> git push
+fatal: The current branch master has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin master
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+PS C:\Users\kotik\OneDrive\Рабочий стол\WebStorme> git push --set-upstream origin master
+Enumerating objects: 23, done.
+Counting objects: 100% (23/23), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (22/22), done.
+Writing objects: 100% (23/23), 240.04 KiB | 16.00 MiB/s, done.
+Total 23 (delta 4), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (4/4), done.
+To https://github.com/JekGuz/WebStorm_1.git
+ * [new branch]      master -> master
+branch 'master' set up to track 'origin/master'.
+PS C:\Users\kotik\OneDrive\Рабочий стол\WebStorme>
