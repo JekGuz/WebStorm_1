@@ -1,0 +1,105 @@
+body{
+    background-color: #bfbbbe;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+header{
+    text-align: center;
+    font-size: 15px;
+    font-variant: small-caps;
+    border: solid 1px #5a5d63;
+    background-image: url(../content/1.png);
+    background-color: #9e969b;
+    background-repeat: no-repeat;
+    background-size: contain; /*pilt mahub header sisse*/
+}
+header h1{
+    letter-spacing: 0.1cm;
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    position: relative;
+    display: inline-block;
+    padding: 10px 15px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li:hover {
+    background-color: #9e969b;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 10px 15px;
+    display: block;
+}
+
+.dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #bfbbbe;
+    min-width: 200px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+
+.menu li:hover > .dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown li {
+    padding: 10px 15px;
+    border-bottom: 1px solid #bfbbbe;
+    background-color: #bfbbbe;
+    transition: background 0.3s ease;
+}
+
+.dropdown li:last-child {
+    border-bottom: none;
+}
+
+.dropdown li:hover {
+    background-color: #e0e0e0;
+}
+
+.dropdown li a {
+    color: #333;
+    font-size: 14px;
+    font-weight: 500;
+    display: block;
+    text-align: left;
+}
+
+main section{
+    margin: 10px;
+    width: 50%;
+    border: dotted 1px #5a5d63;
+    border-radius: 30px;
+    padding: 2%;
+}
+main{
+    display: flex;
+}
+
+
+img{
+    display: flex;
+    border: solid 1px #5a5d63;
+    width: 90%;
+    margin: 0 auto;
+    justify-content: space-around;
+}
