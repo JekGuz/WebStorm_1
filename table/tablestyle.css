@@ -1,0 +1,221 @@
+
+/*************** table id = tabel1 *************************/
+
+table#tabel1 { /* html failis tabel id*/
+    width: 50%;
+    height: 100px;
+    text-align: center;
+    border: 1px solid #4f4f53;
+    border-collapse: collapse; /*uhine ääris */
+}
+td#tabel1{
+    width: 50%;
+    text-align: center;
+    border: 1px solid #4f4f53;
+}
+#tabel1 tr:nth-child(1) td:nth-child(1) {
+    /* 1. rida ja 1. lauter */
+    background: #9e969b;
+}
+#tabel1 tr:nth-child(1) td:nth-child(2) {
+    background: #bfbbbe;
+}
+#tabel1 tr:nth-child(2) td:nth-child(1) {
+    background: #879587;
+}
+#tabel1 tr:nth-child(2) td:nth-child(2) {
+    background: rgba(144, 133, 165, 0.49);
+}
+
+/*************** table id = tabel2 *************************/
+
+table#tabel2 { /* html failis tabel id*/
+    width: 30%;
+    text-align: center;
+    border: 1px solid #4f4f53;
+    /*border-collapse: collapse; /*uhine ääris */
+}
+td#tabel2{
+    width: 50%;
+    text-align: center;
+    border: 1px solid #4f4f53;
+}
+#tabel2 tr:nth-child(1) td:nth-child(1) {
+    /* 1. rida ja 1. lauter */
+    background: #9e969b;
+}
+#tabel2 tr:nth-child(1) td:nth-child(2) {
+    background: #bfbbbe;
+}
+#tabel2 tr:nth-child(2) td:nth-child(1) {
+    background: #879587;
+}
+
+/*************** table id = tabel3 *************************/
+
+table#tabel3 { /* html failis tabel id*/
+    width: 30%;
+    text-align: center;
+    border: 1px solid #4f4f53;
+    /*border-collapse: collapse; /*uhine ääris */
+}
+td#tabel3{
+    width: 50%;
+    text-align: center;
+    border: 1px solid #4f4f53;
+}
+#tabel3 tr:nth-child(1) td:nth-child(1) {
+    /* 1. rida ja 1. lauter */
+    background: #9e969b;
+}
+#tabel3 tr:nth-child(1) td:nth-child(2) {
+    background: #bfbbbe;
+}
+#tabel3 tr:nth-child(2) td:nth-child(1) {
+    background: #879587;
+}
+
+/*************** table id = tabel4 *************************/
+
+table#tabel4 { /* html failis tabel id*/
+    width: 40%;
+    height: 250px;
+    text-align: center;
+    border: 1px solid #4f4f53;
+    border-collapse: collapse; /*uhine ääris */
+}
+td#tabel4{
+    width: 30%;
+    text-align: center;
+    border: 1px solid #4f4f53;
+}
+#tabel4 tr:nth-child(1) td:nth-child(1) {
+    /* 1. rida ja 1. lauter */
+    background: #9e969b;
+}
+#tabel4 tr:nth-child(1) td:nth-child(2) {
+    /* 1. rida ja 1. lauter */
+    background: #c8c397;
+}
+#tabel4 tr:nth-child(1) td:nth-child(3) {
+    background: #bfbbbe;
+}
+#tabel4 tr:nth-child(2) td:nth-child(1) {
+    background: #879587;
+}
+#tabel4 tr:nth-child(3) td:nth-child(1) {
+    background: #7dbdca;
+}
+#tabel4 tr:nth-child(3) td:nth-child(2) {
+    background: #cf8cb2;
+}
+/*************************** TABEL EESTI LIPP *****************************/
+#eesti{
+    width: 330px;
+    height: 210px;
+    border: 1px solid #9e969b;
+    border-collapse: collapse;
+}
+#eesti tr:nth-child(1) {
+    background: #0000ff;
+}
+#eesti tr:nth-child(2) {
+    background: #000000;
+}
+#eesti tr:nth-child(3) {
+    background: #ffffff;
+}
+/*************************** TABEL BELGIA LIPP *****************************/
+#belgia{
+    width: 330px;
+    height: 210px;
+    border: 1px solid #9e969b;
+    border-collapse: collapse;
+}
+#belgia td:nth-child(1) {
+    background: #050505;
+}
+#belgia td:nth-child(2) {
+    background: #f8c70f;
+}
+#belgia td:nth-child(3) {
+    background: #ff0000;
+}
+/*************************** TABEL SWEDEN LIPP *****************************/
+#sweden{
+    width: 330px;
+    height: 210px;
+    border: 1px solid #9e969b;
+    border-collapse: collapse;
+}
+#sweden tr:nth-child(1) td:nth-child(1) {
+    background: #0b3091;
+    width: 25%;
+}
+#sweden tr:nth-child(1) td:nth-child(2) {
+    background: #fad006;
+    width: 10%;
+}
+#sweden tr:nth-child(1) td:nth-child(3) {
+    background: #0b3091;
+    width: 70%;
+}
+#sweden tr:nth-child(2) td:nth-child(1) {
+    background: #fad006;
+    height: 15%;
+}
+#sweden tr:nth-child(3) td:nth-child(1) {
+    background: #0b3091;
+    width: 25%;
+}
+#sweden tr:nth-child(3) td:nth-child(2) {
+    background: #0b3091;
+    width: 70%;
+}
+
+/*************************** TABEL Switzerland  LIPP *****************************/
+#switzer{
+    width: 330px;
+    height: 210px;
+    border: 1px solid #9e969b;
+    border-collapse: collapse;
+}
+#switzer tr:nth-child(3) td:nth-child(2) {
+    background: #ffffff;
+}
+#switzer tr:nth-child(4) td:nth-child(2) {
+    background: #ffffff;
+}
+#switzer tr:nth-child(4) td:nth-child(1) {
+    background: #ffffff;
+}
+#switzer tr:nth-child(4) td:nth-child(3) {
+    background: #ffffff;
+}
+#switzer tr:nth-child(5) td:nth-child(2) {
+    background: #ffffff;
+}
+#switzer tr:nth-child(1) td:nth-child(1) {
+    background: #ff0000;
+}
+#switzer tr:nth-child(2) td:nth-child(1) {
+    background: #ff0000;
+}
+#switzer tr:nth-child(3) td:nth-child(1) {
+    background: #ff0000;
+}
+#switzer tr:nth-child(3) td:nth-child(3) {
+    background: #ff0000;
+}
+#switzer tr:nth-child(3) td:nth-child(4) {
+    background: #ff0000;
+}
+#switzer tr:nth-child(6) td:nth-child(1) {
+    background: #ff0000;
+}
+#switzer tr:nth-child(5) td:nth-child(1) {
+    background: #ff0000;
+}
+#switzer tr:nth-child(5) td:nth-child(3) {
+    background: #fa0000;
+}
