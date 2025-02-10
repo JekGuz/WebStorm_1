@@ -1,0 +1,116 @@
+div#kirjeldus{
+    width:450px;
+    height:350px;
+    padding:5px;
+    border: 2px dotted #5a5d63;
+    position: absolute;
+    top: 300px;
+    left: 1050px;
+}
+body{
+    background-color: #bfbbbe;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+div li{
+    list-style-type: none;   /* Убираем маркер выглядит более красиво, думала что можно придать просто глалочки через "✔" передумала */
+}
+header{
+    text-align: center;
+    font-size: 16px;
+    font-variant: small-caps;
+    border: solid 1px #5a5d63;
+    background-image: url(../../content/1.png);
+    background-color: #9e969b;
+    background-repeat: no-repeat;
+    background-size: contain; /*pilt mahub header sisse*/
+}
+
+header h1{
+    letter-spacing: 0.1cm;
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Keskjoondus */
+    align-items: center;
+    background-color: rgb(158, 150, 155);
+    padding: 15px 0;
+}
+
+nav ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-around; /* Ühtlane jaotus */
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+nav ul li {
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a {
+    color: black;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 10px 15px;
+    display: block;
+}
+
+.dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #bfbbbe;
+    flex-direction: column;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+
+.menu li:hover > .dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown li {
+    padding: 10px 15px;
+    background-color: #bfbbbe;
+    transition: background 0.3s ease;
+}
+
+.dropdown li:last-child {
+    border-bottom: none;
+}
+
+.dropdown li:hover {
+    background-color: #9e969b;
+}
+
+.dropdown li a {
+    color: #333;
+    font-size: 14px;
+    font-weight: 500;
+    display: block;
+    text-align: left;
+}
+section h2{
+    text-align: center;
+    letter-spacing: 0.1cm;
+}
+
+main section{
+    margin: 10px;
+    width: 70%;
+    border: dotted 1px #5a5d63;
+    border-radius: 10px;
+    padding: 2%;
+}
