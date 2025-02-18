@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <title>Küsimustik</title>
+    <link rel="stylesheet" href="vormstyle.css">
+</head>
+<body>
+<h1>Laste küsimustik (Tunnitöö)</h1>
+
+<div class="esimene">
+<form action="/" name="LasteKys">
+    <table>
+        <caption>Sissesta vorm</caption>
+    <tr>
+        <td><label for="nimi">Sisesta nimi:</label></td>
+        <td><input type="text" id="nimi" name="nimi" placeholder="Esnimi"></td>
+    </tr>
+        <tr>
+            <td><label for="vanus">Vanus:</label></td>
+            <td><input type="number" id="vanus" name="vanus" min="3" max="15" step="1"></td>
+        </tr>
+
+    <tr>
+        <td colspan="2">
+        <fieldset>
+            <legend>Vali oma sugu:</legend>
+            <label for="pois">Pois:</label>
+            <input type="radio" id="pois" name="sugu" value="male">
+            <br>
+            <label for="tydruk">Tüdruk:</label>
+            <input type="radio" id="tydruk" name="sugu" value="male">
+        </fieldset>
+        </td>
+    </tr>
+
+    <tr>
+        <td> Mis lapsele meeldib? </td>
+        <td><label for="coca">Coca-Cola</label>
+            <input type="checkbox" id="coca" name="meldib" value="Coca-Cola" checked>
+            <br>
+            <label for="lund">Mängima Lumi</label>
+            <input type="checkbox" id="lund" name="meldib" value="Mängima Lumi" >
+            <br>
+            <label for="kala">Väike kala</label>
+            <input type="checkbox" id="kala" name="meldib" value="Väike kala" >
+            <br>
+            <label for="komm">Kommid</label>
+            <input type="checkbox" id="komm" name="meldib" value="Kommid" >
+            <br>
+            <label for="lemon">Lemon</label>
+            <input type="checkbox" id="lemon" name="meldib" value="Lemon" >
+            <br>
+            <label for="talv0">Talv</label>
+            <input type="checkbox" id="talv0" name="meldib" value="Talv" >
+            <br>
+            <label for="suvi0">Suvi</label>
+            <input type="checkbox" id="suvi0" name="meldib" value="Suvi" >
+            <br></td>
+    </tr>
+
+        <tr>
+    <td><label for="kool">Mis tüüpi koolust sa õpid?</label></td>
+    <td><select name="kool" id="kool">
+        <option value="">vali...</option>
+        <option value="algkool">algkool</option>
+        <option value="põhikool">põhikool</option>
+        <option value="laseaed">laseaed</option>
+        <option value="gümnaasium">gümnaasium</option>
+    </select></td>
+        </tr>
+
+<tr>
+    <td><input type="button" value="Salvesta"></td>
+    <td><input type="reset" value="Puhasta"></td>
+        </tr>
+    </table>
+</form>
+</div>
+
+<div class="teine">
+<h1>Küsimustik</h1>
+    <form action="/" name="kysim">
+        <table>
+            <caption>Sissesta vorm</caption>
+            <tr>
+                <td><label for="name">Sisesta nimi:</label></td>
+                <td><input type="text" id="name" name="name" placeholder="nimi"></td>
+            </tr>
+            <tr>
+                <td><label for="last">Sisesta perekonnanimi:</label></td>
+                <td><input type="text" id="last" name="last" placeholder="perekonnanimi"></td>
+            </tr>
+            <tr>
+                <td><label for="email">Sisesta email:</label></td>
+                <td><input type="email" id="email" name="email" placeholder="*****@gmail.com"></td>
+            </tr>
+            <tr>
+                <td><label for="telefon">Sisesta telefoni number:</label></td>
+                <td><input type="tel" id="telefon" name="telefon" placeholder="372 ********" pattern="[0-9]{3}-[0-9]{8}" required></td>
+            </tr>
+            <tr>
+                <td><label for="kuu">Sisesta oma vanus:</label></td>
+                <td><input type="date" id="kuu" name="kuu"></td>
+            </tr>
+            <tr>
+                <td><label for="koht">Mis linnas sa sündisid?</label></td>
+                <td><select name="kool" id="koht">
+                    <option value="">vali...</option>
+                    <option value="tallinn">Tallinn</option>
+                    <option value="tartu">Tartu</option>
+                    <option value="parnu">Pärnu</option>
+                    <option value="johvi">Jõvhi</option>
+                    <option value="narva">Narva</option>
+                    <option value="viljandi">Viljandi</option>
+                    <option value="rakvere">Rakvere</option>
+                    <option value="maardu">Maardu</option>
+                    <option value="teine">Teine varian</option>
+                </select></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <fieldset>
+                        <legend>Küsimustikus on kõik selge:</legend>
+                        <label for="jah">Jah kõik on selge</label>
+                        <input type="radio" id="jah" name="jah" value="jah">
+                        <br>
+                        <label for="ei">Ei ole, midagi on vale</label>
+                        <input type="radio" id="ei" name="ei" value="ei">
+                    </fieldset>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="rahul">kui rahul olete (1-->10):</label></td>
+                <td><input type="range" id="rahul" name="rahul" min="0" max="10"></td>
+            </tr>
+            <tr>
+                <td> Lemmik aastaaeg? </td>
+                <td><label for="suvi">Suvi</label>
+                    <input type="checkbox" id="suvi" name="aastaaeg" value="Suvi">
+                    <br>
+                    <label for="sugis">Sügis</label>
+                    <input type="checkbox" id="sugis" name="aastaaeg" value="Sügis" >
+                    <br>
+                    <label for="talv">Talv</label>
+                    <input type="checkbox" id="talv" name="aastaaeg" value="Talv" >
+                    <br>
+                    <label for="kevad">Kevad</label>
+                    <input type="checkbox" id="kevad" name="aastaaeg" value="Kevad" >
+                    <br></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="Salvesta"></td>
+                <td><input type="reset" value="Puhasta"></td>
+            </tr>
+
+
+        </table>
+    </form>
+</div>
+
+<footer>
+    <hr>
+    <strong>Kontakt info</strong>
+    leht tegi J.G. &copy; 2025
+
+</footer>
+    </body>
+<!--
+<form action="/" name="LasteKys">
+    <label for="nimi">Sisesta nimi:</label>
+    <input type="text" id="nimi" name="nimi" placeholder="Esnimi">
+    <br>
+    <label for="vanus">Vanus:</label>
+    <input type="number" id="vanus" name="vanus" min="3" max="15" step="1">
+    <br>
+     radio nupp - üks valik mitmest
+    <fieldset>
+        <legend>Vali oma sugu:</legend>
+        <label for="pois">Pois:</label>
+        <input type="radio" id="pois" name="sugu" value="male">
+         ALT + J несколько выделения, сколько нажал сколько выделился
+        <br>
+        <label for="tydruk">Tüdruk:</label>
+        <input type="radio" id="tydruk" name="sugu" value="male">
+    </fieldset>
+    <br>
+     CHERCKBOX
+    Mis lapsele meeldib?
+    <br>
+    <label for="coca">Coca-Cola</label>
+    <input type="checkbox" id="coca" name="meldib" value="Coca-Cola" checked>
+    <br>
+    <label for="lund">Mängima Lumi</label>
+    <input type="checkbox" id="lund" name="meldib" value="Mängima Lumi" >
+    <br>
+    <label for="kala">Väike kala</label>
+    <input type="checkbox" id="kala" name="meldib" value="Väike kala" >
+    <br>
+    <label for="komm">Kommid</label>
+    <input type="checkbox" id="komm" name="meldib" value="Kommid" >
+    <br>
+    <label for="lemon">Lemon</label>
+    <input type="checkbox" id="lemon" name="meldib" value="Lemon" >
+    <br>
+    <label for="talv">Talv</label>
+    <input type="checkbox" id="talv" name="meldib" value="Talv" >
+    <br>
+    <label for="suvi">Suvi</label>
+    <input type="checkbox" id="suvi" name="meldib" value="Suvi" >
+    <br>
+    <br>
+    <label for="kool">Mis tüüpi koolust sa õpid?</label>
+    <select name="kool" id="kool">
+        <option value="">vali...</option>
+        <option value="algkool">algkool</option>
+        <option value="põhikool">põhikool</option>
+        <option value="laseaed">laseaed</option>
+        <option value="gümnaasium">gümnaasium</option>
+    </select>
+    <br>
+    <input type="button" value="Salvesta">
+    <input type="reset" value="Puhasta">
+</form> -->
+
+</html>
