@@ -8,6 +8,7 @@ td{
     border: 1px solid #5a5d63;
     padding: 2%;
 }
+
 input[type=text], input[type=number], input[type=email], input[type=tel], input[type=date], input[type=file], input[type=time], input[type=week]{
     border: 1px solid #5a5d63;
     border-radius: 4px;
@@ -44,7 +45,7 @@ input[type=range] {
     -webkit-appearance: inherit; /* Убирает стандартный стиль в WebKit-браузерах */
 }
 input[type=color] {
-    width: 90%;
+    width: 80%;
     height: 40px;
     background: #cdcdcd;
 }
@@ -65,6 +66,17 @@ input[type=submit]{
     color: #0c0c0c;
     background-color: #81c386;
 }
+
+input[type=file]{
+    border: 1px solid #5a5d63;
+    border-radius: 4px;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    color: #0c0c0c;
+    background-color: #9e969b;
+}
+
 select{
     border: 1px solid #5a5d63;
     border-radius: 4px;
@@ -73,8 +85,6 @@ select{
     background: #cdcdcd;
 
 }
-
-
 
 
 body{
@@ -95,4 +105,30 @@ header{
 
 header h1{
     letter-spacing: 0.1cm;
+}
+
+#subitnupp {
+
+    position: absolute;
+    top: 120%;
+    right: 100px;
+    width: 300px;
+
+    padding: 15px;
+    border: 2px dotted #5a5d63;
+    border-radius: 8px;
+    background-color: #9e969b;
+}
+
+#subitnupp1 {
+
+    position: absolute;
+    top: 30%;
+    right: 100px;
+    width: 300px;
+
+    padding: 15px;
+    border: 2px dotted #5a5d63;
+    border-radius: 8px;
+    background-color: #9e969b;
 }

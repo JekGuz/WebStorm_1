@@ -4,21 +4,24 @@
     <meta charset="UTF-8">
     <title>Küsimustik</title>
     <link rel="stylesheet" href="vormstyle.css">
+    <script src = "Jskysimustik.js" ></script>
 </head>
 <body>
 <h1>Laste küsimustik (Tunnitöö)</h1>
 
 <div class="esimene">
-<form action="vastus.html" name="LasteKys">
+<form> <!-- action="vastus.html" name="LasteKys" -->
     <table>
         <caption>Sissesta vorm</caption>
     <tr>
         <td><label for="nimi">Sisesta nimi:</label></td>
-        <td><input type="text" id="nimi" name="nimi" placeholder="Esnimi"></td>
+        <td><input type="text" id="nimi" name="nimi" placeholder="Esnimi" oninput="tekstLugimine()"></td>
+        <td><div id="nimivastus">Siia tuleb vastus </div> </td>
     </tr>
         <tr>
             <td><label for="vanus">Vanus:</label></td>
-            <td><input type="number" id="vanus" name="vanus" min="3" max="15" step="1"></td>
+            <td><input type="number" id="vanus" name="vanus" min="3" max="15" step="1" oninput="numberNupp()"></td>
+            <td><div id="vanusvastus">Siia tuleb vastus </div> </td>
         </tr>
 
     <tr>
@@ -26,87 +29,98 @@
         <fieldset>
             <legend>Vali oma sugu:</legend>
             <label for="pois">Pois:</label>
-            <input type="radio" id="pois" name="sugu" value="male">
+            <input type="radio" id="pois" name="sugu" value="Pois" onchange="suguNupp()">
             <br>
             <label for="tydruk">Tüdruk:</label>
-            <input type="radio" id="tydruk" name="sugu" value="male">
+            <input type="radio" id="tydruk" name="sugu" value="Tüdruk" onchange="suguNupp()">
         </fieldset>
         </td>
+        <td><div id="suguvastus">Siia tuleb vastus </div> </td>
     </tr>
 
     <tr>
         <td> Mis lapsele meeldib? </td>
         <td><label for="coca">Coca-Cola</label>
-            <input type="checkbox" id="coca" name="meldib" value="Coca-Cola" checked>
+            <input type="checkbox" id="coca" name="meldib" value="Coca-Cola" onchange="checkboxkontrol()">
             <br>
             <label for="lund">Mängima Lumi</label>
-            <input type="checkbox" id="lund" name="meldib" value="Mängima Lumi" >
+            <input type="checkbox" id="lund" name="meldib" value="Mängima Lumi" onchange="checkboxkontrol()">
             <br>
             <label for="kala">Väike kala</label>
-            <input type="checkbox" id="kala" name="meldib" value="Väike kala" >
+            <input type="checkbox" id="kala" name="meldib" value="Väike kala" onchange="checkboxkontrol()">
             <br>
             <label for="komm">Kommid</label>
-            <input type="checkbox" id="komm" name="meldib" value="Kommid" >
+            <input type="checkbox" id="komm" name="meldib" value="Kommid" onchange="checkboxkontrol()">
             <br>
             <label for="lemon">Lemon</label>
-            <input type="checkbox" id="lemon" name="meldib" value="Lemon" >
+            <input type="checkbox" id="lemon" name="meldib" value="Lemon" onchange="checkboxkontrol()">
             <br>
             <label for="talv0">Talv</label>
-            <input type="checkbox" id="talv0" name="meldib" value="Talv" >
+            <input type="checkbox" id="talv0" name="meldib" value="Talv" onchange="checkboxkontrol()">
             <br>
             <label for="suvi0">Suvi</label>
-            <input type="checkbox" id="suvi0" name="meldib" value="Suvi" >
+            <input type="checkbox" id="suvi0" name="meldib" value="Suvi" onchange="checkboxkontrol()">
             <br></td>
+        <td> <div id="checkboxvastus">Siia tuleb vastus </div> </td>
     </tr>
 
         <tr>
     <td><label for="kool">Mis tüüpi koolust sa õpid?</label></td>
-    <td><select name="kool" id="kool">
+    <td><select name="kool" id="kool" onchange="selectKool()">
         <option value="">vali...</option>
         <option value="algkool">algkool</option>
         <option value="põhikool">põhikool</option>
         <option value="laseaed">laseaed</option>
         <option value="gümnaasium">gümnaasium</option>
     </select></td>
+    <td> <div id="selectvastus">Siia tuleb vastus </div> </td>
         </tr>
 
 <tr>
-    <td><input type="submit" value="Salvesta"></td>
-    <td><input type="reset" value="Puhasta"></td>
+    <td><input type="submit" value="Salvesta" onclick="subitnupp1(event)"></td>
+    <td><input type="reset" value="Puhasta" onclick="puhasta()"></td>
         </tr>
     </table>
+
+    <div id="subitnupp1"></div>
+
 </form>
 </div>
 
 <div class="teine">
 <h1>Küsimustik</h1>
-    <form action="vastus.html" name="kysim">
+    <form>  <!-- action="vastus.html" name="kysim" -->
         <table>
             <caption>Sissesta vorm</caption>
             <tr>
                 <td><label for="name">Sisesta nimi:</label></td>
-                <td><input type="text" id="name" name="name" placeholder="nimi"></td>
+                <td><input type="text" id="name" name="name" placeholder="nimi" oninput="tekstLugimine1()"></td>
+                <td><div id="nimivastus1">Siia tuleb vastus </div> </td>
             </tr>
             <tr>
                 <td><label for="last">Sisesta perekonnanimi:</label></td>
-                <td><input type="text" id="last" name="last" placeholder="perekonnanimi"></td>
+                <td><input type="text" id="last" name="last" placeholder="perekonnanimi" oninput="tekstLugimine2()"></td>
+                <td><div id="nimivastus2">Siia tuleb vastus </div> </td>
             </tr>
             <tr>
                 <td><label for="email">Sisesta email:</label></td>
-                <td><input type="email" id="email" name="email" placeholder="*****@gmail.com"></td>
+                <td><input type="email" id="email" name="email" placeholder="*****@gmail.com" oninput="tekstLugimine3()"></td>
+                <td><div id="emailvastus">Siia tuleb vastus </div> </td>
             </tr>
             <tr>
-                <td><label for="telefon">Sisesta telefoni number:</label></td>
-                <td><input type="tel" id="telefon" name="telefon" placeholder="37255******" pattern="372\d{7,8}" required></td>
+                <td><label for="telefon">Sisesta telefoni number (NB 372 kirjutame esimesed):</label></td>
+                <td><input type="tel" id="telefon" name="telefon" placeholder="37255******" pattern="372\d{7,8}" required oninput="tekstLugimine4()"></td>
+                <td><div id="numbervastus">Siia tuleb vastus </div> </td>
             </tr>
             <tr>
                 <td><label for="kuu">Sisesta oma sünnikuupäev:</label></td>
-                <td><input type="date" id="kuu" name="kuu" lang="et"></td>
+                <td><input type="date" id="kuu" name="kuu" lang="et" oninput="datelugimine()"></td>
+                <td><div id="datevastus">Siia tuleb vastus </div> </td>
             </tr>
 
             <tr>
                 <td><label for="koht">Mis linnas sa sündisid?</label></td>
-                <td><select name="kool" id="koht">
+                <td><select name="koht" id="koht" onchange="selectkoht()">
                     <option value="">vali...</option>
                     <option value="tallinn">Tallinn</option>
                     <option value="tartu">Tartu</option>
@@ -116,68 +130,78 @@
                     <option value="viljandi">Viljandi</option>
                     <option value="rakvere">Rakvere</option>
                     <option value="maardu">Maardu</option>
-                    <option value="teine">Teine varian</option>
+                    <option value="teine...">Teine varian</option>
                 </select></td>
+                <td> <div id="selectvastuskoht">Siia tuleb vastus </div> </td>
             </tr>
             <tr>
                 <td><label for="nadal">Kas teil on aasta lemmiknädal?</label></td>
-                <td><input type="week" id="nadal" name="nadal" lang="et"></td>
+                <td><input type="week" id="nadal" name="nadal" lang="et" oninput="nadallugimine()"></td>
+                <td><div id="nadalvastus">Siia tuleb vastus </div> </td>
             </tr>
             <tr>
                 <td><label for="time">Sinu lemmik aeg?</label></td>
-                <td><input type="time" id="time" name="time"></td>
+                <td><input type="time" id="time" name="time" oninput="timelugimine()"></td>
+                <td><div id="timevastus">Siia tuleb vastus </div> </td>
             </tr>
             <tr>
-                <td><label for="rahul">Kui õnnelik sa oled(1-->10):</label></td>
-                <td><input type="range" id="rahul" name="rahul" min="1" max="10" step="1" value="5" oninput="output.value = rahul.value">
-                    <br>
-                    <output id="output">5</output></td>
+                <td><label for="rahul">Sinu õnnelik number(1-->10):</label></td>
+                <td><input type="range" id="rahul" name="rahul" min="1" max="10" step="1" value="5" oninput="lucklugimine()">
+
+                <td><div id="luckvastus">Siia tuleb vastus </div> </td>
             </tr>
             <tr>
                 <td><label for="varv">Mis on su lemmikvärv?</label></td>
-                <td><input type="color" id="varv" name="varv" value="000000"></td>
+                <td><input type="color" id="varv" name="varv" value="000000" oninput="output.value = varv.value"></td>
+                <td> <output id="output"></output></td>
             </tr>
             <tr>
                 <td> Lemmik aastaaeg? </td>
                 <td><label for="suvi">Suvi</label>
-                    <input type="checkbox" id="suvi" name="aastaaeg" value="Suvi">
+                    <input type="checkbox" id="suvi" name="aastaaeg" value="suvi" onchange="checkboxaeg()">
                     <br>
                     <label for="sugis">Sügis</label>
-                    <input type="checkbox" id="sugis" name="aastaaeg" value="Sügis" >
+                    <input type="checkbox" id="sugis" name="aastaaeg" value="sugis" onchange="checkboxaeg()">
                     <br>
                     <label for="talv">Talv</label>
-                    <input type="checkbox" id="talv" name="aastaaeg" value="Talv" >
+                    <input type="checkbox" id="talv" name="aastaaeg" value="talv" onchange="checkboxaeg()">
                     <br>
                     <label for="kevad">Kevad</label>
-                    <input type="checkbox" id="kevad" name="aastaaeg" value="Kevad" >
+                    <input type="checkbox" id="kevad" name="aastaaeg" value="kevad" onchange="checkboxaeg()">
                     <br></td>
+                <td> <div id="checkboxvastusaeg">Siia tuleb vastus </div> </td>
             </tr>
             <td colspan="2">
                 <fieldset>
                     <legend>Küsimustikus on kõik selge:</legend>
                     <label for="jah">Jah kõik on selge</label>
-                    <input type="radio" id="jah" name="jah" value="jah">
+                    <input type="radio" id="jah" name="selge" value="jah" onchange="selgeNupp()">
                     <br>
                     <label for="ei">Ei ole, midagi on vale</label>
-                    <input type="radio" id="ei" name="ei" value="ei">
-                </fieldset>
-            </td>
-
+                    <input type="radio" id="ei" name="selge" value="ei" onchange="selgeNupp()">
+                </fieldset></td>
+            <td><div id="selgevastus">Siia tuleb vastus</div></td>
             <tr>
                 <td><label for="pild">Lae üles oma pilt:</label></td>
-                <td><input type="file" id="pild" name="pild"></td>
+                <td><input type="file" id="pild" name="pild" onchange="piltLugimine()"></td>
+                <td><div id="piltvastus">pilt</div> </td>
+                    <!-- Здесь будет отображаться выбранное изображение -->
             </tr>
 
 
             <tr>
-                <td><input type="submit" value="Salvesta"></td>
-                <td><input type="reset" value="Puhasta"></td>
+                <td><input type="submit" value="Salvesta" onclick="subitnupp(event)" ></td>
+                <td><input type="reset" value="Puhasta" onclick="puhasta1()"></td>
             </tr>
+
 
 
         </table>
     </form>
 </div>
+<!-- Здесь появятся введенные данные -->
+<div id="subitnupp"></div>
+
 
 <footer>
     <hr>

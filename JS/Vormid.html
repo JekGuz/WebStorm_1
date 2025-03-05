@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <title>Vormist lugemine ja abil</title>
+  <script src = "Lugemine.js" ></script>
+  <link rel="stylesheet" href="../vormid/vormstyle.css">
+</head>
+<body>
+<h1>Vormist lugemine ja abil</h1>
+
+<!--Color  -->
+<label for="varv" >Vali lemmik värv</label>
+<input type="color" id="varv">
+<br>
+<!--TEXT -->
+  <label for="nimi">Sisesta nimi:</label>
+  <input type="text" id="nimi" name="nimi" placeholder="nimi" oninput="tekstLugimine()">
+<div id ="vastus"> </div>
+<br>
+<!--Button -->
+<input type="button" value="OK" onclick="nuppVajutame()">
+<div id ="vastus2"> </div>
+<br>
+<!--Radio nupp -->
+<label for="jah">Jah</label>
+<input type="radio" id="jah" name="kysimus" value="jah" onchange="radioNupp()">
+<br>
+<label for="ei">Ei</label>
+<input type="radio" id="ei" name="kysimus" value="ei" onchange="radioNupp()">
+
+<!--pildi koht-->
+ <img src ="" alt="" id ="pilt">
+
+
+<!--Radio clik -->
+<br>
+<input type="button" value="Raadio Click" onclick="radioNupp()">
+<div id ="vastus3"> </div>
+<br>
+<!--SELECT -->
+<label for="valik">Tee oma valik:</label>
+<select name="valik" id="valik" onchange="selectValik()">
+  <option value="">vali...</option>
+  <option value="Õpelane">Õpelane</option>
+  <option value="Õpetaja">Õpetaja</option>
+  <option value="Üleõpilane">Üleõpilane</option>
+  <option value="Praktikant">Praktikant</option>
+</select>
+<div id ="vastus4"> </div>
+
+
+
+
+
+
+<br>
+<!--Reset nupp -->
+<input type="reset" value="Puhasta" onclick="puhasta()">
+
+
+
+</body>
+</html>
