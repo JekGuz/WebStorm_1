@@ -1,4 +1,4 @@
-// random pilt, mis võetakse piltide massiivist
+//random pilt, mis võetakse piltide massiivist
 function randomPilt() {
     const pildid =[
         'img/cat.jpg',
@@ -104,9 +104,6 @@ function sunnipaevradio() {
             vastussynni2.style.backgroundColor = "purple";
             valikLeitud = true;
 
-            vastussynni2 = randomp
-
-
             break;
         }
         else {   //теоритически не нужно, т.к. радио кнопки один всегда включин
@@ -116,19 +113,21 @@ function sunnipaevradio() {
     }
 }
 
-function randomp() {
-    const pildid2 =[
+
+// Загрузка для того чтобы работать
+window.addEventListener("load", RandomP);
+
+function RandomP() {
+    const pildidList =[
         'img/A1.png',
         'img/N2.png',
         'img/Y4.png',
         'img/Z3.png'
     ];
 
-    const pilt2=Math.floor(Math.randomp()*pildid2.length);
-    const rpilt2=pildid2[pilt2];
-    const randomp=document.getElementById("randomp");
+    const rNum=Math.floor(Math.random()*pildidList.length);
+    const RandomPilt=pildidList[rNum];
+    const RandomPiltSRC=document.getElementById("rPildid2");
 
-    randomp.src=rpilt2;
+    RandomPiltSRC.src=RandomPilt;
 }
-
-

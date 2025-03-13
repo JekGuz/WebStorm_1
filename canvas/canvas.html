@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="et" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Joonistamine JS abil</title>
+    <link rel="stylesheet" href="canvasStyle.css">
+    <script src="canvasScript.js"></script>
+    <script src="lippScript.js"></script>
+    <script src="majaScript.js"></script>
+</head>
+<body>
+<h1>Joonistamine JS abil</h1>
+<canvas id="pyhi" width="400" height="300"> </canvas>
+<br>
+
+<label for="radius">Radius:</label>
+<input type="number" id="radius" min="1" max="200" step="10">  <!-- onclick delete -->
+<input type="button" value="ring" onclick="ring()">
+<br>
+
+<label for="laius">Laius:</label>
+<input type="number" id="laius" min="1" max="200" step="10"> <!-- onclick delete -->
+<label for="korgus">Kõrgus:</label>
+<input type="number" id="korgus" min="1" max="200" step="10"> <!-- onclick delete -->
+<input type="button" value="ristkülik" onclick="ristkulik()">
+<br>
+
+<input type="button" value="joon" onclick="joon()">
+
+<br>
+<br>
+<input type="button" value="kustuta" onclick="kustuta()">
+
+<h1>Lipud</h1>
+<canvas id="lipp" width="330" height="210"> </canvas>
+<br>
+<input type="button" value="eesti" onclick="eestilipp()">
+<input type="button" value="france" onclick="fralipp()">
+<input type="button" value="switzerland" onclick="switzlipp()">
+<input type="button" value="turkey" onclick="turkeylipp()">
+<input type="button" value="brazil" onclick="brazillipp()">
+
+
+
+<br>
+<br>
+<input type="button" value="kustutalipp" onclick="kustutalipp()">
+<br>
+<br>
+<h1>Minu maja</h1>
+<canvas id="maja" width="400" height="400"> </canvas>
+<br>
+<input type="button" value="Maja" onclick="majapyhi()">
+<input type="button" value="Aknad" onclick="aknad()">
+<input type="button" value="Uks" onclick="uks()">
+<input type="button" value="Katus" onclick="katus()">
+<input type="button" value="Korsten" onclick="korsten()">
+<input type="button" value="Suitsu" onclick="suitsu()">
+<br>
+<br>
+<input type="button" value="Päike" onclick="paike()">
+<input type="button" value="Pilved" onclick="pilved()">
+<input type="button" value="Puu" onclick="puu()">
+<input type="button" value="Joonista Kõik" onclick="joonistamaja()">
+<input type="button" value="Kustuta" onclick="kustutakoik()">
+
+</body>
+</html>
