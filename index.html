@@ -4,8 +4,86 @@
     <meta charset="UTF-8">
     <title>Jekaterina Guzek koduleht</title>
     <link rel="stylesheet" href="style/index_style.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.min.js" integrity="sha256-AlTido85uXPlSyyaZNsjJXeCs07eSv3r43kyCVc8ChI=" crossorigin="anonymous"></script>
+
+
+    <script>
+        // teksti värv orange
+        function red() {
+            $('h2#Jq').css('color', '#b61717');
+            $('h2#Jq').animate({fontSize: '3em'})
+            $('#text').css('color', '#7313ac');
+        }
+
+        function mustaks() {
+            $('h2#Jq').css('color', 'black');
+            $('h2#Jq').animate({fontSize: '1em'})
+            $('#text').css('color', 'white');
+        }
+
+        function koordinadi(event, ui) {
+            let koht = ui.offset;
+            $('#koord').html(' x: '+koht.left+' y: '+koht.top);
+        }
+
+        function fadein(){
+                $("#panel").fadeIn();
+
+        }
+
+        function fadeout(){
+                $("#panel").fadeOut();
+
+        }
+
+
+        function start() {
+            $('#Jq').mouseenter(red);
+            $('#text').mouseenter(red);
+            $('#text').mouseleave(mustaks);
+            $('#Jq').mouseleave(mustaks); // hiir on välja
+            $('#valerias').draggable();
+            $('#paragraph').draggable();
+            $('#Jq').draggable();
+            $('#valerias').bind("drag", koordinadi);
+
+
+        }
+        function first() {
+            var div = $("#nav");
+            div.animate({left: '100px'}, "slow");
+            div.animate({fontSize: '3em'}, "slow");
+        }
+
+        function back() {
+            var div = $("#nav");
+            div.animate({left: '0px'}, "slow");
+            div.animate({fontSize: '1em'}, "slow");
+        }
+
+        $(document).ready(function() {
+            $("#info").click(function() {
+                alert("Info:\n" +
+                    "→ Верхние кнопки увеличивают с помощью animate:\n" +
+                    "   • Увеличивают размер шрифта и секции,\n" +
+                    "   • Затем возвращают исходный размер.\n\n" +
+                    "→ Ниже появляется скрытый блок:\n" +
+                    "   • Его можно показать или скрыть с помощью fadeIn/fadeOut.\n\n" +
+                    "→ В последнем блоке можно:\n" +
+                    "   • Поиграть с картинкой,\n" +
+                    "   • Перетаскивать текст,\n" +
+                    "   • Навести на текст — он изменится.\n\n" +
+                    "→ Кнопка 'Info' красиво открывает меню с информацией.\n" +
+                    "Приятного пребывания на моем сайте! 😊");
+            });
+        });
+
+
+    </script>
+
 </head>
-<body>
+<body onload="start()">
 <!-- NIMETUS -->
 <header>
     <!-- <img src="content/1.png"/> -->
@@ -30,10 +108,13 @@
 </nav>
 <br>
 <br>
+    <input type="button" id="esimene" value="Midagi lõbus" onclick="first()"></input>
+    <input type="button" id="tagasi" value="Oh no, tagasi" onclick="back()"></input>
+    <input type="button" id="info" value="Info"></input>
 <br>
 <!-- SISU -->
 <main>
-    <section>
+    <section id="nav">
 <h2>Jälle navigeerimist muudetud</h2>
         <p> Tegin seda mitu korda ümber ja otsustasin variandiga, kus navigeerimist laiendasin  <br>
             <strong> justify-content: center;</strong> <br>
@@ -54,9 +135,55 @@
 
     <section>
         <h2>Oma mõttled</h2>
+        <p>
+            <li>Arendus on pidev õppimisprotsess. Iga uus projekt on võimalus saada paremaks, leida uusi lahendusi ja luua kasutajasõbralikke liideseid.</li>
+            <li>Soovin areneda veebiarenduse ja disaini valdkonnas, õppida uusi tehnoloogiaid ja luua kasutajasõbralikke digilahendusi.</li>
+        </p>
+
+        <input type="button" id="slipdown" value="Proovi mind!" onclick="fadein()"></input>
+        <input type="button" id="slipup" value="Kõik aitab" onclick="fadeout()"></input>
+
         <div>
 
         </div>
+    </section>
+
+    <section id="panel">
+        <h2 id="Jq">Provime mängima koos jQuery</h2>
+        <div id="koord"></div>
+        <br>
+        <input type="button" id="paramale" value="Paremale" onclick="$('p#paragraph').animate({left: '500px'}, 1000)">
+        <input type="button" id="vasalule" value="Vasakule" onclick="$('p#paragraph').animate({left: '0px'}, 1000)">
+        <input type="button" id="hide" value="Peita" onclick="$('img#valerias').hide();"></input>
+        <input type="button" id="show" value="Näita" onclick="$('img#valerias').show();"></input>
+        <input type="button" id="slide" value="Hüppame" onclick="$('img#valerias').slideUp(2000).slideDown(2000)"></input>
+        <br>
+
+        <p id="paragraph">Siin me proovime natukene mängida kooos kõik asjad</p>
+
+        <img src="valerias.png" id="valerias" height="225" width="225"/>
+
+    </section>
+
+    <section id="text">
+
+            <ol> Верхние кнопки увеличивают с помощью <code>animate</code>: </ol><br>
+            <li> Увеличивают размер шрифта и секции,</li><br>
+           <li> Затем возвращают исходный размер.</li><br>
+
+            <ol>Ниже появляется скрытый блок: </ol><br>
+           <li> Его можно показать или скрыть с помощью <code>fadeIn</code>/<code>fadeOut</code>.</li><br>
+
+            <ol>В последнем блоке можно:</ol><br>
+           <li> Поиграть с картинкой,</li><br>
+           <li> Перетаскивать текст,</li><br>
+           <li> Навести на текст — он изменится.</li><br>
+
+            <ol>Кнопка <strong>Info</strong> красиво открывает <code>Alert</code> меню с информацией.</ol><br>
+
+        <li><strong>NB!</strong> Так же добавила в этот <code>selection</code> простое меняние цвета фиолнтово/белый</li>
+
+
     </section>
 
 </main>

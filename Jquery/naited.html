@@ -3,15 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <title>jQuevy näited</title>
+    <link rel="stylesheet" href="naitedStyle.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.min.js" integrity="sha256-AlTido85uXPlSyyaZNsjJXeCs07eSv3r43kyCVc8ChI=" crossorigin="anonymous"></script>
+
+    <script>
+        // teksti värv orange
+        function orange() {
+            $('h1, #tekst').css('color', '#950000FF');
+        }
+        function green() {
+            $('#tekst').css('color', 'green');
+        }
+        function mustaks() {
+            $('h1').css('color', 'black');
+        }
+        function koordinadi(event, ui) {
+            let koht = ui.offset;
+            $('#koord').html(' x: '+koht.left+' y: '+koht.top);
+
+        }
+
+
+        function start() {
+            $('h1, #tekst').mouseenter(orange); // hiir on peal
+            $('h1').mouseleave(mustaks); // hiir on välja
+            $('#tekst').mouseleave(green);
+            $('#fox').draggable();
+            $('#tekst').draggable();
+            $('h1').draggable();
+            $('#fox').bind("drag", koordinadi);
+        }
+    </script>
+
 </head>
-<body>
+<body onload="start()">
 <h1>jQuery näited</h1>
-<div>
+<div id="tekst">
     jQuery CDN
     jQuery is a JavaScript Library.
     jQuery greatly simplifies JavaScript programming.
     jQuery is easy to learn.
 </div>
+<br>
+<input type="button" id="paramale" value="paremale" onclick="$('div#tekst').animate({left: '500px'}, 1000)">
+<input type="button" id="vasalule" value="vasakule" onclick="$('div#tekst').animate({left: '0px'}, 1000)">
+<input type="button" id="hide" value="hide" onclick="$('div#tekst').hide();"></input>
+<input type="button" id="show" value="show" onclick="$('div#tekst').show();"></input>
+<br>
+
+<img src="fox.png" id="fox" alt="fox" height="400" width="400"/>
+<br>
+<div id="koord"></div>
 
 
 </body>
